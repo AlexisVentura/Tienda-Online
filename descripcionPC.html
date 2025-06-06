@@ -2,8 +2,13 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Descripción del Producto</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -22,21 +27,18 @@
 
         .imagen-producto {
             width: 100%;
-            height: 300px;
-            object-fit: contain; /* <-- Esto evita que se recorte */
+            height: auto;
+            max-height: 300px;
+            object-fit: contain;
             border-radius: 5px;
             margin-bottom: 20px;
-            background-color: #f0f0f0; /* Fondo para los espacios vacíos */
+            background-color: #f0f0f0;
         }
 
         h1 {
             color: #333;
-        }
-
-        p {
-            font-size: 16px;
-            line-height: 1.6;
-            color: #555;
+            font-size: 28px;
+            margin-bottom: 10px;
         }
 
         .precio {
@@ -45,8 +47,27 @@
             margin: 15px 0;
         }
 
+        p, li {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        ul {
+            margin-top: 10px;
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
         .botones {
             margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
         }
 
         .botones a {
@@ -56,44 +77,80 @@
             background-color: #007bff;
             color: white;
             transition: background-color 0.3s;
-            margin-right: 10px;
         }
 
         .botones a:hover {
             background-color: #0056b3;
+        }
+
+        /* Responsividad */
+        @media (max-width: 768px) {
+            .contenedor {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .precio {
+                font-size: 20px;
+            }
+
+            .botones {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .botones a {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+
+            .contenedor {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+
+            p, li {
+                font-size: 15px;
+            }
         }
     </style>
 </head>
 <body>
 
 <div class="contenedor">
-    <img src="imagenes/desktop-connected-to-monitor.avif" alt="Producto 1" class="imagen-producto">
+    <img src="imagenes/desktop-connected-to-monitor.avif" alt="Computadora Dell" class="imagen-producto">
 
-    <h1>Smart TV Samsung 43" Full HD</h1>
+    <h1>Dell OptiPlex - Computadora de Escritorio</h1>
     <p class="precio">$725.95</p>
 
     <p>
-        Dell OptiPlex - Computadora de escritorio de forma pequeña,Intel Core i5 6500, 
-        procesador de 3.2 GHz, RAM de 8 GB, SSD M.2 de 120 GB, disco duro de 2 TB, 
-        teclado y mouse, Wi-Fi, Bluetooth, HDMI, 22
+        Computadora de escritorio Dell con procesador Intel Core i5 6500 a 3.2 GHz, 
+        8 GB de RAM, SSD M.2 de 120 GB y disco duro de 2 TB. Incluye teclado, mouse, 
+        conectividad Wi-Fi y Bluetooth, además de puerto HDMI. Pantalla de 22 pulgadas.
     </p>
 
-    <p>
-        Características destacadas:
-        <ul>
-            <li>Marca	Dell</li>
-            <li>Sistema operativo	Windows 10 Professional</li>
-            <li>Modelo de CPU	Core i5</li>
-            <li>Sistema operativo Tizen</li>
-            <li>Descripción de la tarjeta gráfica Integrado</li>
-            <li>Coprocesador de gráficos Intel HD Graphics 530</li>
-            <li>Coprocesador de gráficos Intel HD Graphics 530</li>
-            <li>Capacidad de almacenamiento de memoria	1.2E+2 GB</li>
-            <li>Usos específicos del producto Videojuegos</li>      
-            <li>Tipo de diseño de computadora personal Torre de ordenador</li>
-            <li>Tamaño de pantalla 22 Pulgadas</li> 
-        </ul>
-    </p>
+    <ul>
+        <li><strong>Marca:</strong> Dell</li>
+        <li><strong>Sistema operativo:</strong> Windows 10 Professional</li>
+        <li><strong>Modelo de CPU:</strong> Core i5</li>
+        <li><strong>Tarjeta gráfica:</strong> Integrado (Intel HD Graphics 530)</li>
+        <li><strong>Almacenamiento:</strong> SSD 120 GB + HDD 2 TB</li>
+        <li><strong>Uso recomendado:</strong> Videojuegos, oficina</li>
+        <li><strong>Diseño:</strong> Torre de ordenador</li>
+        <li><strong>Pantalla:</strong> 22 pulgadas</li>
+    </ul>
 
     <div class="botones">
         <a href="#">Comprar</a>
