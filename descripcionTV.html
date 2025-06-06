@@ -2,8 +2,13 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Descripción del Producto</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -22,15 +27,18 @@
 
         .imagen-producto {
             width: 100%;
-            height: 300px;
-            object-fit: contain; /* <-- Esto evita que se recorte */
+            height: auto;
+            max-height: 300px;
+            object-fit: contain;
             border-radius: 5px;
             margin-bottom: 20px;
-            background-color: #f0f0f0; /* Fondo para los espacios vacíos */
+            background-color: #f0f0f0;
         }
 
         h1 {
             color: #333;
+            font-size: 28px;
+            margin-bottom: 10px;
         }
 
         p {
@@ -45,8 +53,21 @@
             margin: 15px 0;
         }
 
+        ul {
+            margin-top: 10px;
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
         .botones {
             margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
         }
 
         .botones a {
@@ -56,37 +77,74 @@
             background-color: #007bff;
             color: white;
             transition: background-color 0.3s;
-            margin-right: 10px;
         }
 
         .botones a:hover {
             background-color: #0056b3;
+        }
+
+        /* Responsividad */
+        @media (max-width: 768px) {
+            .contenedor {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .precio {
+                font-size: 20px;
+            }
+
+            .botones {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .botones a {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+
+            .contenedor {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+
+            p, li {
+                font-size: 15px;
+            }
         }
     </style>
 </head>
 <body>
 
 <div class="contenedor">
-    <img src="imagenes/latin-fhd-t5300-un43t5300apxpa-rperspectiveblack-229166449.webp" alt="Producto 1" class="imagen-producto">
+    <img src="imagenes/latin-fhd-t5300-un43t5300apxpa-rperspectiveblack-229166449.webp" alt="Smart TV Samsung" class="imagen-producto">
 
     <h1>Smart TV Samsung 43" Full HD</h1>
     <p class="precio">$399.99</p>
 
-    <p>
-        Disfruta de tus contenidos favoritos con una resolución Full HD clara y vibrante. 
-        Este Smart TV de Samsung ofrece acceso a múltiples aplicaciones de streaming, conectividad HDMI/USB 
-        y un diseño elegante que combina con cualquier espacio del hogar.
-    </p>
+    <p>Disfruta de tus contenidos favoritos con una resolución Full HD clara y vibrante. 
+    Este Smart TV de Samsung ofrece acceso a múltiples aplicaciones de streaming, conectividad HDMI/USB 
+    y un diseño elegante que combina con cualquier espacio del hogar.</p>
 
-    <p>
-        Características destacadas:
-        <ul>
-            <li>Resolución Full HD (1920x1080)</li>
-            <li>Acceso a Netflix, YouTube, Disney+ y más</li>
-            <li>Puertos HDMI, USB, Wi-Fi</li>
-            <li>Sistema operativo Tizen</li>
-        </ul>
-    </p>
+    <ul>
+        <li>Resolución Full HD (1920x1080)</li>
+        <li>Acceso a Netflix, YouTube, Disney+ y más</li>
+        <li>Puertos HDMI, USB, Wi-Fi</li>
+        <li>Sistema operativo Tizen</li>
+    </ul>
 
     <div class="botones">
         <a href="#">Comprar</a>
