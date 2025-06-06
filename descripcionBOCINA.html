@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descripción del Producto</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .contenedor {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .imagen-producto {
+            width: 100%;
+            height: auto;
+            max-height: 300px;
+            object-fit: contain;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .precio {
+            font-size: 24px;
+            color: #007bff;
+            margin: 15px 0;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        ul {
+            margin-top: 10px;
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .botones {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .botones a {
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s;
+        }
+
+        .botones a:hover {
+            background-color: #0056b3;
+        }
+
+        /* Responsividad */
+        @media (max-width: 768px) {
+            .contenedor {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .precio {
+                font-size: 20px;
+            }
+
+            .botones {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .botones a {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+
+            .contenedor {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+
+            p, li {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="contenedor">
+    <img src="imagenes/bocina.jpg" alt="Computadora Dell" class="imagen-producto">
+
+    <h1>Bocina Inteligente</h1>
+    <p class="precio">$725.95</p>
+
+    <p>
+        Descubre la innovación y el estilo con el Echo Dot de 4ª Generación de Amazon, 
+        un parlante inteligente que no solo ofrece un sonido envolvente, sino que también 
+        incorpora un práctico reloj para mantenerte al tanto del tiempo. Con su elegante
+         diseño en color glacier white, este dispositivo se adapta perfectamente a cualquier 
+         espacio de tu hogar, transformando la manera en que interactúas con la tecnología. 
+         Controla tu música, ajusta el clima y recibe respuestas a tus preguntas con solo usar 
+         tu voz gracias a Alexa, tu asistente personal. Además, puedes disfrutar de alarmas y 
+         recordatorios, todo desde la comodidad de tu sofá. Dale un toque moderno y funcional a 
+         tu hogar con el Echo Dot, y transforma tu día a día en una experiencia más inteligente y 
+         conectada. ¡Hazte con el tuyo y vive la revolución del sonido inteligente!
+    </p>
+
+    <ul>
+        <li>Color Blanco</li>
+        <li>Color de fantasía</li>
+        <li>Alto 89 mm</li>
+        <li>Ancho 100 mm</li>
+        <li>Profundidad 100 mm</li>
+        <li>Bluetooth integrado Sí</li>
+        <li>Wi-Fi integrado Sí</li> 
+        <li>Garantía del proveedor 3 meses</li>
+        <li>Incluye Adaptador (15 W) blanco. Guía rápida de inicio</li>
+        <li>GTIN 840080593524</li> 
+        <li>Modelo comercial Echo Dot 4ª Generación</li> 
+        <li>MPN B07XJ8C8F7</li>
+        <li>Tipo de producto Parlante inteligente</li>
+    </ul>
+
+    <div class="botones">
+        <a href="#">Comprar</a>
+        <a href="index.html">Volver al Catálogo</a>
+    </div>
+</div>
+
+</body>
+</html>
